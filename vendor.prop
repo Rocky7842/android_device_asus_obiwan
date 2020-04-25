@@ -85,6 +85,9 @@ persist.vendor.qcom.bluetooth.scram.enabled=false
 persist.bluetooth.a2dp_offload.disabled=false
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
 
+# Dex2oat
+dalvik.vm.dex2oat64.enabled=true
+
 # DRM
 drm.service.enabled=true
 
