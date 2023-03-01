@@ -160,6 +160,9 @@ TARGET_MODULE_ALIASES := \
     wlan.ko:qca_cld3_qca6390.ko \
     wsa_macro_dlkm.ko:audio_wsa_macro.ko
 
+# Lineage Health
+TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
+
 # Partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := odm product system system_ext vendor vendor_dlkm
 BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 6441926656
