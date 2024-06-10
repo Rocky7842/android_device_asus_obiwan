@@ -1,0 +1,14 @@
+[
+ {
+   "remote":      "github",
+   "repository":  "Rocky7842/android_kernel_asus_sm8250",
+   "target_path": "kernel/asus/sm8250",
+   "branch":    "crdroid-14.0"
+ },
+ {
+   "remote":      "github",
+   "repository":  "Rocky7842/proprietary_vendor_asus_obiwan",
+   "target_path": "vendor/asus/obiwan",
+   "branch":    "crdroid-14.0"
+ }
+]
