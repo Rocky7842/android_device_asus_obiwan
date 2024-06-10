@@ -275,8 +275,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.media.c2@1.0.vendor \
-    init.qti.media.rc \
-    init.qti.media.sh \
     libOmxCore \
     libOmxVdec \
     libOmxVenc \
