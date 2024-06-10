@@ -384,7 +384,7 @@
 
     <!-- Names of the key handler classes -->
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
-        <item>org.blissroms.settings.asusparts.touch.TouchKeyHandler</item>
+        <item>org.lineageos.settings.asusparts.touch.TouchKeyHandler</item>
     </string-array>
 
     <!-- Do the battery/notification LEDs support pulsing?

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.blissroms.settings.asusparts.preference;
+package org.lineageos.settings.asusparts.preference;
 
 import android.content.ContentResolver;
 import android.preference.PreferenceDataStore;

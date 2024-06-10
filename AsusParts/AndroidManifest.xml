@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015 The CyanogenMod Project
-                   2017-2020 The LineageOS Project
+                   2017-2024 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     android:sharedUserId="android.uid.system"
-    package="org.blissroms.settings.asusparts"
+    package="org.lineageos.settings.asusparts"
     android:versionCode="1"
     android:versionName="1"
     xmlns:tools="http://schemas.android.com/tools" >
@@ -30,11 +30,11 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <permission
-        android:name="org.blissroms.settings.asusparts.touch.TRIGGER_SCREEN_OFF_GESTURE"
+        android:name="org.lineageos.settings.asusparts.touch.TRIGGER_SCREEN_OFF_GESTURE"
         android:protectionLevel="signatureOrSystem" />
 
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
-    <protected-broadcast android:name="org.blissroms.settings.asusparts.UPDATE_SETTINGS" />
+    <protected-broadcast android:name="org.lineageos.settings.asusparts.UPDATE_SETTINGS" />
 
     <application
         android:icon="@android:drawable/sym_def_app_icon"
@@ -118,7 +118,7 @@
 
         <activity
             android:name=".touch.TouchGestureActivity"
-            android:permission="org.blissroms.settings.asusparts.touch.TRIGGER_SCREEN_OFF_GESTURE"
+            android:permission="org.lineageos.settings.asusparts.touch.TRIGGER_SCREEN_OFF_GESTURE"
             android:excludeFromRecents="true"
             android:exported="true"
             android:label="@string/touchscreen_gesture_settings_title">

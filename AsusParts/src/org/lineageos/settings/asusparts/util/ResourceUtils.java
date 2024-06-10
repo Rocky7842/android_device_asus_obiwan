@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The LineageOS Project
+ * Copyright (C) 2024 The LineageOS Project
  * Copyright (C) 2022 The BlissRoms Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.blissroms.settings.asusparts.util;
+package org.lineageos.settings.asusparts.util;
 
 import android.content.res.Resources;
 import android.util.Log;
@@ -34,7 +34,7 @@ public class ResourceUtils {
     public static String getStringForResourceName(final Resources res,
                                                   final String resourceName,
                                                   final String defaultValue) {
-        final int resId = res.getIdentifier(resourceName, "string", "org.blissroms.settings.asusparts.touch");
+        final int resId = res.getIdentifier(resourceName, "string", "org.lineageos.settings.asusparts.touch");
         if (resId <= 0) {
             Log.e(TAG, "No resource found for " + resourceName);
             return defaultValue;

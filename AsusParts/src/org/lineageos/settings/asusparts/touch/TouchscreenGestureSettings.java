@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.blissroms.settings.asusparts.touch;
+package org.lineageos.settings.asusparts.touch;
 
 import android.app.Fragment;
 import android.content.Context;
@@ -34,11 +34,11 @@ import androidx.preference.PreferenceManager;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 
-import com.android.internal.lineage.hardware.LineageHardwareManager;
-import com.android.internal.lineage.hardware.TouchscreenGesture;
+import lineageos.hardware.LineageHardwareManager;
+import lineageos.hardware.TouchscreenGesture;
 
-import org.blissroms.settings.asusparts.R;
-import org.blissroms.settings.asusparts.util.ResourceUtils;
+import org.lineageos.settings.asusparts.R;
+import org.lineageos.settings.asusparts.util.ResourceUtils;
 
 import java.lang.System;
 

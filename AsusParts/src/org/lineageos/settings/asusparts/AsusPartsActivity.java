@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2015 The CyanogenMod Project
- *               2017-2020 The LineageOS Project
+ *               2017-2024 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,22 +15,23 @@
  * limitations under the License.
  */
 
-package org.blissroms.settings.asusparts.doze;
+package org.lineageos.settings.asusparts;
+
 
 import android.os.Bundle;
+
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 import com.android.settingslib.widget.R;
 
-public class DozeSettingsActivity extends CollapsingToolbarBaseActivity {
-
-    private static final String TAG_DOZE = "doze";
+public class AsusPartsActivity extends CollapsingToolbarBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getFragmentManager().beginTransaction().replace(R.id.content_frame,
-                new DozeSettingsFragment(), TAG_DOZE).commit();
+        getFragmentManager().beginTransaction()
+                    .add(R.id.content_frame, new AsusParts())
+                    .commit();
+        }
     }
-}

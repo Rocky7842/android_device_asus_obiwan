@@ -1,4 +1,4 @@
-package org.blissroms.settings.asusparts.touch;
+package org.lineageos.settings.asusparts.touch;
 
 import android.app.Activity;
 import android.app.KeyguardManager;
@@ -6,7 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import org.blissroms.settings.asusparts.util.*;
+import org.lineageos.settings.asusparts.util.*;
 
 public class TouchGestureActivity extends Activity {
 

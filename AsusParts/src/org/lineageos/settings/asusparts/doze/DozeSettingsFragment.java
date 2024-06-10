@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2015 The CyanogenMod Project
- *               2017-2020 The LineageOS Project
+ *               2017-2024 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.blissroms.settings.asusparts.doze;
+package org.lineageos.settings.asusparts.doze;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -34,7 +34,7 @@ import androidx.preference.SwitchPreference;
 import com.android.settingslib.widget.MainSwitchPreference;
 import com.android.settingslib.widget.OnMainSwitchChangeListener;
 
-import org.blissroms.settings.asusparts.R;
+import org.lineageos.settings.asusparts.R;
 
 public class DozeSettingsFragment extends PreferenceFragment implements 
         Preference.OnPreferenceChangeListener, OnMainSwitchChangeListener {

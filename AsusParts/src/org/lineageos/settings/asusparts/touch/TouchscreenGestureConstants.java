@@ -15,11 +15,11 @@
  * limitations under the License.
  */
 
-package org.blissroms.settings.asusparts.touch;
+package org.lineageos.settings.asusparts.touch;
 
 public class TouchscreenGestureConstants {
     // Broadcast action for settings update
-    public static final String UPDATE_PREFS_ACTION = "org.blissroms.settings.asusparts.UPDATE_SETTINGS";
+    public static final String UPDATE_PREFS_ACTION = "org.lineageos.settings.asusparts.UPDATE_SETTINGS";
     // Broadcast extra: keycode mapping (int[]: key = gesture ID, value = keycode)
     public static final String UPDATE_EXTRA_KEYCODE_MAPPING = "keycode_mappings";
     // Broadcast extra: assigned actions (int[]: key = gesture ID, value = action)

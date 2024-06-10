@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The LineageOS Project
+ * Copyright (C) 2024 The LineageOS Project
  * Copyright (C) 2022 The BlissRoms Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.blissroms.settings.asusparts.util;
+package org.lineageos.settings.asusparts.util;
 
 import android.app.KeyguardManager;
 import android.content.Context;
@@ -26,7 +26,7 @@ import android.os.UserHandle;
 
 import java.util.List;
 
-import org.blissroms.settings.asusparts.touch.*;
+import org.lineageos.settings.asusparts.touch.*;
 
 public class ActionUtils {
 
@@ -80,7 +80,7 @@ public class ActionUtils {
         KeyguardManager km = (KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE);
         if (km.isKeyguardLocked()){
             intent = new Intent();
-            intent.setClassName("org.blissroms.settings.asusparts", "org.blissroms.settings.asusparts.touch.TouchGestureSettingsActivity");
+            intent.setClassName("org.lineageos.settings.asusparts", "org.lineageos.settings.asusparts.touch.TouchGestureSettingsActivity");
             intent.putExtra(TouchGestureActivity.ACTION_KEY, action);
         }
         startActivitySafely(context, intent);
