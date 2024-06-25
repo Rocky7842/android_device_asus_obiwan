@@ -13,6 +13,18 @@
  },
  {
    "remote":      "github",
+   "repository":  "LineageOS/android_vendor_nxp_nfc",
+   "target_path": "vendor/nxp/nfc",
+   "branch":    "lineage-20.0"
+ },
+ {
+   "remote":      "github",
+   "repository":  "LineageOS/android_vendor_nxp_secure_element",
+   "target_path": "vendor/nxp/secure_element",
+   "branch":    "lineage-20.0"
+ },
+ {
+   "remote":      "github",
    "repository":  "sreelekshman/hardware_dolby",
    "target_path": "hardware/dolby",
    "branch":    "A14-moto"
