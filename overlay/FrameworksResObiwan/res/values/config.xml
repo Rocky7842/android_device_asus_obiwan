@@ -320,7 +320,7 @@
     <integer-array name="config_udfps_sensor_props" translatable="false" >
         <item>540</item> <!-- sensorLocationX -->
         <item>1781</item> <!-- sensorLocationY -->
-        <item>130</item> <!-- sensorRadius -->
+        <item>123</item> <!-- sensorRadius -->
     </integer-array>
 
     <!-- The default intensity level for haptic feedback. See Settings.System.HAPTIC_FEEDBACK_INTENSITY
