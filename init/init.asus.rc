@@ -73,5 +73,5 @@ service vendor.sensors-hal-2-1-multihal /vendor/bin/hw/android.hardware.sensors@
 
 # Health
 on boot
-    chmod 0660 /sys/class/power_supply/battery/input_suspend
-    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0660 /sys/class/power_supply/battery/device/smartchg_stop_charging
+    chown system system /sys/class/power_supply/battery/device/smartchg_stop_charging
