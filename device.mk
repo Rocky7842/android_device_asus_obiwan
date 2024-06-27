@@ -350,6 +350,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     goodix_9896_cfg_group.recovery
 
+# QDCM
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/qdcm/,$(TARGET_COPY_OUT_VENDOR)/etc)
+
 # QMI
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
