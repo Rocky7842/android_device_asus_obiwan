@@ -9,7 +9,6 @@
 #include "Vibrator.h"
 
 #include <log/log.h>
-
 #include <thread>
 
 namespace aidl {
@@ -52,8 +51,10 @@ Vibrator::Vibrator() {
 }
 
 ndk::ScopedAStatus Vibrator::getCapabilities(int32_t* _aidl_return) {
-    *_aidl_return = IVibrator::CAP_ON_CALLBACK | IVibrator::CAP_AMPLITUDE_CONTROL |
-                    IVibrator::CAP_PERFORM_CALLBACK;
+    *_aidl_return = IVibrator::CAP_ON_CALLBACK | IVibrator::CAP_PERFORM_CALLBACK;
+
+    if (mGainStream)
+        *_aidl_return |= IVibrator::CAP_AMPLITUDE_CONTROL;
 
     return ndk::ScopedAStatus::ok();
 }
@@ -80,11 +81,28 @@ ndk::ScopedAStatus Vibrator::on(int32_t timeoutMs,
     return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es __unused,
-                                     const std::shared_ptr<IVibratorCallback>& callback __unused,
+ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength strength,
+                                     const std::shared_ptr<IVibratorCallback>& callback,
                                      int32_t* _aidl_return) {
     long playLengthMs;
     int index;
+    float amplitude;
+
+    switch (strength) {
+        case EffectStrength::LIGHT:
+            amplitude = AMPLITUDE_LIGHT;
+            break;
+        case EffectStrength::MEDIUM:
+            amplitude = AMPLITUDE_MEDIUM;
+            break;
+        case EffectStrength::STRONG:
+            amplitude = AMPLITUDE_STRONG;
+            break;
+        default:
+            return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+    }
+
+    setAmplitude(amplitude);
 
     switch (effect) {
         case Effect::CLICK:
@@ -135,7 +153,8 @@ ndk::ScopedAStatus Vibrator::setAmplitude(float amplitude) {
     if (amplitude <= 0.0f || amplitude > 1.0f)
         return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_ILLEGAL_ARGUMENT));
 
-    mGainStream << (uint8_t)(amplitude * 0xff);
+    if (mGainStream)
+        mGainStream << (int32_t)(amplitude * AMPLITUDE_GAIN_MAX) << std::flush;
 
     return ndk::ScopedAStatus::ok();
 }

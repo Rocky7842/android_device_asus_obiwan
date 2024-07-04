@@ -10,6 +10,12 @@
 
 #include <fstream>
 
+#define AMPLITUDE_LIGHT 0.4
+#define AMPLITUDE_MEDIUM 0.65
+#define AMPLITUDE_STRONG 1
+
+#define AMPLITUDE_GAIN_MAX 128
+
 namespace aidl {
 namespace android {
 namespace hardware {
