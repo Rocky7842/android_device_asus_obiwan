@@ -194,6 +194,10 @@ PRODUCT_PACKAGES += \
 # Dolby
 $(call inherit-product, hardware/dolby/dolby.mk)
 
+# Factory
+PRODUCT_PACKAGES += \
+    factory_mount_point_symlink
+
 # Fastboot
 PRODUCT_PACKAGES += \
     fastbootd
