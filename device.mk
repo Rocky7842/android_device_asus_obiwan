@@ -151,6 +151,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
 PRODUCT_PACKAGES += \
+    libutilscallstack.vendor \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
     vendor.qti.hardware.camera.device@1.0.vendor \
@@ -365,8 +366,11 @@ PRODUCT_COPY_FILES += \
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
 PRODUCT_PACKAGES += \
+    libcurl.vendor \
     libjson \
+    libjsoncpp.vendor \
     libqti_vndfwk_detect.vendor \
+    libsqlite.vendor \
     libvndfwk_detect_jni.qti.vendor
 
 # RIL
@@ -422,6 +426,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+PRODUCT_PACKAGES += \
+    libion.vendor
+
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
@@ -464,6 +471,7 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 PRODUCT_PACKAGES += \
+    libpng.vendor \
     libwfdaac_vendor
 
 # WiFi
