@@ -24,6 +24,8 @@ on early-boot
 on boot
     # Fingerprint
     chown system system /dev/goodix_fp
+    chown system system /sys/devices/platform/goodix_ts.0/gesture/aod_enable
+    chown system system /sys/devices/platform/goodix_ts.0/gesture/fod_pressed
 
     # Light
     chown system system /sys/class/sensors/lsensor/adc
