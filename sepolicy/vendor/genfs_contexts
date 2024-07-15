@@ -26,7 +26,7 @@ genfscon sysfs /devices/platform/soc/soc:richtek,rt-charger/power_supply/rt-chg/
 # Sensors
 genfscon sysfs /devices/virtual/sensors/lsensor/switch             u:object_r:vendor_sysfs_sensors:s0
 genfscon sysfs /devices/virtual/sensors/psensor/switch             u:object_r:vendor_sysfs_sensors:s0
-genfscon sysfs /devices/platform/goodix_ts.0/gesture/aod_enable    u:object_r:vendor_sysfs_sensors:s0
+genfscon sysfs /devices/platform/goodix_ts.0/gesture/fp_wakeup     u:object_r:vendor_sysfs_sensors:s0
 genfscon sysfs /devices/platform/goodix_ts.0/gesture/fod_pressed   u:object_r:vendor_sysfs_sensors:s0
 
 # Thermal

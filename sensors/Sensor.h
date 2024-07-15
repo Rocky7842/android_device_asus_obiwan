@@ -120,7 +120,7 @@ class SysfsPollingOneShotSensor : public OneShotSensor {
 
 const std::string kGoodixPath = "/sys/devices/platform/goodix_ts.0/gesture/";
 const std::string kFodPressedPath = kGoodixPath + "fod_pressed";
-const std::string kFodModePath = kGoodixPath + "aod_enable";
+const std::string kFodModePath = kGoodixPath + "fp_wakeup";
 
 class UdfpsSensor : public SysfsPollingOneShotSensor {
   public:
